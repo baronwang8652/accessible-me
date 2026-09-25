@@ -52,9 +52,25 @@ table {
 
 body {
   font-family: 'Roboto', Helvetica, sans-serif;
-  background-color: grey;
+  /* was "grey" (#808080) - too dark for link text to meet WCAG AA contrast */
+  background-color: #f2f2f2;
+  color: #1a1a1a;
   margin: 0;
   padding: 0;
+}
+
+/* Explicit link colours so contrast does not depend on browser defaults */
+a {
+  color: #0b3d91;
+}
+
+a:visited {
+  color: #5a2d91;
+}
+
+a:hover,
+a:focus-visible {
+  color: #08285f;
 }
 
 /* Add focus styles for accessibility */
